@@ -1,0 +1,7 @@
+<%
+String NUM1 = "groove";
+String NUM2 = "-";
+String NUM3 = "gear";
+
+out.print(NUM1+NUM2+NUM3);
+%>
