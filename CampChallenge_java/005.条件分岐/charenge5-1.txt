@@ -1,0 +1,11 @@
+<%
+int num = 2;
+
+if (num == 1){
+    out.print("１です！");
+}else if(num==2){
+    out.print("プログラミングキャンプ！");
+}else{
+    out.print("それ以外です");
+}
+%>
