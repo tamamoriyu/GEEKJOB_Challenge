@@ -1,0 +1,8 @@
+<%
+
+int num = 10;
+final int num1 = 20;
+out.print(num+num1);
+
+%>
+
