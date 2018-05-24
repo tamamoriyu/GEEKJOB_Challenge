@@ -1,0 +1,12 @@
+<%
+    String[] data = {"10", "100", "soeda", "hayashi", "-20", "180", "END"};
+    out.print(data[0]);
+    out.print(data[1]);
+    out.print(data[2]);
+    out.print(data[3]);
+    out.print(data[4]);
+    out.print(data[5]);
+    out.print(data[6]);
+    
+%>
+
