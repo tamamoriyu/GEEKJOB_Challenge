@@ -1,0 +1,23 @@
+//booleanの式を作成する
+    //0と等しいならtrue、それ以外false
+    boolean check(int num){
+        if (num == 0) {
+            return true;
+        } else {
+            return false;}
+    }
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+            response.setContentType("text/html;charset=UTF-8");
+            try (PrintWriter out = response.getWriter()) {
+
+        //呼び出す処理
+        //checkに0を与え、判断された後の処理を作成
+        if (check(0)) {
+            out.print("この処理は正しく実行されました");
+            } else {
+            out.print("正しく実行されませんでした");}
+            }     
+        }
+    
