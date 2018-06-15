@@ -1,0 +1,28 @@
+public class charenge11_3 extends HttpServlet {
+    
+    //メソッドを作成する
+    void insu(int num, int num2, boolean num3, PrintWriter pw){
+        int reslt = num * num2;
+        //計算式を入力する
+        if ((reslt % 2 == 0) && (reslt != 0)) {
+            //偶数なら２乗する
+            pw.print(reslt * reslt);
+        } else {
+            //奇数なら何もしない
+            pw.print(reslt);
+        }
+    }
+    //デフォルト値を設定する
+    void insu(PrintWriter pw){
+        insu(5, 1, false, pw);
+    }
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            
+            //呼び出しを行う
+            insu(10, 20, true, out);
+        }
+            }
