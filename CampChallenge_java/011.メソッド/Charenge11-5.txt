@@ -1,0 +1,25 @@
+public class method4 extends HttpServlet {
+    
+    //メソッドを作成する
+    private int calculation (int num){
+        return num + 50;
+    }
+
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {            
+            
+            //メソッドから返却された値が変数に格納される
+            int num = calculation(150);
+            
+            if (num >= 200) {
+                out.print("200以上です");
+            } else if (num < 100) {
+                out.print("100未満です");
+            }else{
+                out.print("100以上200未満です");
+            }
+            
+        }
+    }
