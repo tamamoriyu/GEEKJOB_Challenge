@@ -1,0 +1,17 @@
+public class methood5 extends HttpServlet {
+    
+    void user_profile(PrintWriter pw){
+        
+        String[] profile = {"1", "技育太郎", "東京", "男", "プログラマー"};
+        pw.print(Arrays.toString(profile));
+    }
+    
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            
+            user_profile(out);
+        }
+    }
