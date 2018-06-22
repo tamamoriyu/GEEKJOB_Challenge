@@ -1,0 +1,30 @@
+//クラスを作成
+public class Charenge13_1 extends HttpServlet {
+    
+    //フィールドの作成
+    public String name = "";
+    public int age = 0;
+    
+    //①の引数をフィールドに格納するメソッド
+    void setHuman(String n, int a) {
+        // 引数をフィールドへ設定
+        this.name = n;
+        this.age = a;
+}
+    //②の2つのフィールドを画面に表示するメソッド
+    void main(PrintWriter pw){
+        pw.print(name);
+        pw.print(age);
+    }
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            
+            //メソッドを呼び出す
+            setHuman("玉森", 27);
+            main(out);
+        }
+    }
+    
