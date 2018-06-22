@@ -1,0 +1,43 @@
+public class methood7 extends HttpServlet {
+
+  //メソッドの作成
+    void user_profile(int num, PrintWriter pw){
+        
+        //switch文で3つのケースを作成
+        switch (num) {
+            case 1:
+                {
+                    String[] profile = {"1", "技育太郎", "東京", "null", "プログラマー"};
+                    pw.print(Arrays.toString(profile));
+                    break;
+                }
+            case 2:
+                {
+                    String[] profile = {"2", "技育花子", "null", "女", "システムエンジニア"};
+                    pw.print(Arrays.toString(profile));
+                    break;
+                }
+            case 3:
+                {
+                    String[] profile = {"3", "技育三郎", "大阪", "男", "null"};
+                    pw.print(Arrays.toString(profile));
+                    break;
+                }
+            //defaultでそれ以外の結果を作成
+            default:
+                pw.print("null");
+                break;
+        }
+    }
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            
+            //メソッドの呼び出し処理
+            user_profile(1, out);
+        }
+    }
+    
+    
