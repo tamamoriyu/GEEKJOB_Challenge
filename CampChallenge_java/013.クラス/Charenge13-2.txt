@@ -1,0 +1,22 @@
+public class Charenge13_2 extends Charenge13_1 {
+    
+    void clear(PrintWriter pw){
+        name = "null";
+        age = 0;
+        pw.print(name);
+        pw.print(age);
+    }
+    
+    @Override
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            
+            //メソッドを呼び出す
+            setHuman("玉森", 27);
+            clear(out);
+            
+        }
+    }
+    
