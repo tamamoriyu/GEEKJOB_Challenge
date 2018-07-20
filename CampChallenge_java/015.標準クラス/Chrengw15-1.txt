@@ -1,0 +1,14 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Charenge15_1 {
+    public static void main(String[] args) {
+        // 今日の日付作成
+        Date now = new Date();
+        // SimpleDateFormat作成
+        SimpleDateFormat sdf =
+            new SimpleDateFormat("2016/1/1 0:0:0");
+
+        System.out.print(sdf.format(now));
+    }
+}
