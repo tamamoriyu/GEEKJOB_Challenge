@@ -1,0 +1,7 @@
+public class Charenge15_7 {
+    public static void main(String[] args) {
+        
+        String adlles = "tamamori@yu.co.jp";
+        System.out.print(adlles.substring(9));
+    }
+}
