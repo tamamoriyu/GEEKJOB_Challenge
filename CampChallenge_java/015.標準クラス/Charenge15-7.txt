@@ -1,0 +1,11 @@
+public class Charenge15_7 {
+    public static void main(String[] args) {
+        
+        String mogi = "きょUはぴIえIちぴIのくみこみかんすUのがくしゅUをしてIます";
+        
+        String henkan1 = mogi.replaceAll("I", "い");
+        String henkan2 = henkan1.replaceAll("U", "う");
+        
+        System.out.println(henkan2);
+    } 
+}
