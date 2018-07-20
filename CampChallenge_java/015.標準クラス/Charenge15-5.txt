@@ -1,0 +1,7 @@
+public class Charenge15_6 {
+    public static void main(String[] args) {
+        String name = "たまもりゆう";
+        System.out.println(name.length());
+        System.out.println(name.getBytes().length);
+    }
+}
