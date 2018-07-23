@@ -1,0 +1,14 @@
+public class Charenge15_10 {
+    public static void main(String[] args) {
+        Date now = new Date();
+        
+        SimpleDateFormat start = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        System.out.print("処理開始時間は" + start.format(now));
+        
+        String profile = "私の名前は玉森だよ";
+        System.out.println (profile.replace("だよ", "です"));
+        
+        SimpleDateFormat  end = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        System.out.print("処理終了時間は" + end.format(now));
+    }
+}
