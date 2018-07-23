@@ -1,0 +1,11 @@
+package Charenge15_8.java;
+
+import java.io.File;
+import java.io.IOException;
+        
+public class Charenge15_8 {
+    public static void main(String[] args) throws IOException {
+        // ファイルオープン
+        File fp = new File("私の名前は玉森です");
+    }
+}
