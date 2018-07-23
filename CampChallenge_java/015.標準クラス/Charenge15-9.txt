@@ -1,0 +1,23 @@
+public class Charenge15_8 {
+    public static void main(String[] args) throws IOException {
+        // ファイルオープン
+        File fp = new File("test.txt");
+
+        // FileWriter作成
+        FileWriter fw = new FileWriter(fp);
+        // 書き込み
+        fw.write("私の名前は玉森です");
+        // クローズ
+        fw.close();
+    
+
+            // FileReader作成
+            FileReader fr = new FileReader(fp);
+            // BufferedReader作成
+            BufferedReader br = new BufferedReader(fr);
+            // 1行読み出し
+            System.out.print(br.readLine());
+
+            br.close();
+    }
+}
