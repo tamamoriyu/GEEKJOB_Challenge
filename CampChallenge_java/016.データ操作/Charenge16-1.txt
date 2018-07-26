@@ -1,0 +1,41 @@
+HTML
+
+<!-- 名前情報（テキストボックスで作成） 
+      性別情報（ラジオボタンで作成） 
+      趣味情報（テキストエリアで作成） -->
+
+<html>
+  <head>
+    <title>Charenge16-</title>
+  <meta http-equiv="content-type" charset="utf-8">
+  </head>
+  <body>
+    <form action="./Charenge16_1.jsp" method="post">
+      <!-- formタグで括られた入力項目はこれら -->
+      氏名
+      <input type="text" name="txtName">
+      <br>
+      <input type="radio" name="rdoSample" value="男">男
+      <input type="radio" name="rdoSample" value="女">女
+      <br>
+      趣味など
+      <textarea name="mulText"></textarea>
+      <br>
+      <input type="submit" name="btnSubmit">
+    </form>
+  </body>
+</html>
+JSP
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%
+// 受け取るパラメータの文字コード
+request.setCharacterEncoding("UTF-8");
+// テキストボックスの情報
+out.print(request.getParameter("txtName"));
+// ラジオボタンの情報
+out.print(request.getParameter("rdoSample"));
+// テキストエリアの情報
+out.print(request.getParameter("mulText"));
+%>
